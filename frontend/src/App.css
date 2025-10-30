@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+}
+.car-scroll {
+  max-height: 400px;   /* adjust as needed */
+  overflow-y: auto;    /* vertical scrollbar */
+  padding-right: 10px; /* prevent content cutoff */
+}
+
+/* Optional: style the scrollbar */
+.car-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.car-scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+.car-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
