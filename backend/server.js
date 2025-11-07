@@ -53,7 +53,7 @@ app.use(express.static("public"));
 /*const PORT = process.env.PORT || 5005;
 app.listen(PORT, () => console.log(`🚀 Backend running on port ${PORT}`));*/
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5005;
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);
 });
