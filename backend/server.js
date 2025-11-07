@@ -47,5 +47,11 @@ app.use("/api/bookings", bookingRoutes);
 // static files for images (serve public folder)
 app.use(express.static("public"));
 
-const PORT = process.env.PORT || 5005;
-app.listen(PORT, () => console.log(`🚀 Backend running on port ${PORT}`));
+/*const PORT = process.env.PORT || 5005;
+app.listen(PORT, () => console.log(`🚀 Backend running on port ${PORT}`));*/
+
+const port = process.env.PORT || 3000;
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
+});
+
