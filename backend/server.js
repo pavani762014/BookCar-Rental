@@ -16,9 +16,12 @@ const carRoutes = require("./routes/cars");
 const app = express();
 app.use(
   cors({
-    origin: "https://wonderful-dolphin-301786.netlify.app", // your Netlify frontend link
+    origin: [
+  "https://wonderful-dolphin-301786.netlify.app",
+  "http://localhost:3000"
+], // your Netlify frontend link
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    withCredentials:true,
   })
 );
 
