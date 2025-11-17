@@ -4,14 +4,13 @@ const router = express.Router();
 const bookingController = require("../controllers/bookingController");
 const { verifyToken } = require("../middleware/verifyToken");
 
-// create booking; token optional (handler accepts userId or uses req.user.id)
+// CREATE booking (requires login)
 router.post("/book", verifyToken, bookingController.bookCar);
+
+// GET current user's bookings (token required)
 router.get("/", verifyToken, bookingController.getBookingsByUser);
 
-// fetch bookings for a user by param (public) or current user
+// GET bookings by user ID (public or admin)
 router.get("/user/:userId", bookingController.getBookingsByUser);
-
-// fetch current user's bookings (token required)
-router.get("/", verifyToken, bookingController.getBookingsByUser);
 
 module.exports = router;
