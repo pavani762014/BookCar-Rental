@@ -33,7 +33,7 @@ const Cars = () => {
       });
 
        await axios.post(
-        "http://localhost:5005/api/bookings/book",
+        "https://book-car-rental-backend.onrender.com/api/bookings/book",
         {
           userId,
           carId, // ✅ Important!

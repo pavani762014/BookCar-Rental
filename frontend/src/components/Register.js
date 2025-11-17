@@ -12,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5005/api/auth/register", { username, email, password });
+      const res = await axios.post("https://book-car-rental-backend.onrender.com/api/auth/register", { username, email, password },{ withCredentials: true });
       setMessage(res.data.message || "Registered!");
       setTimeout(()=>navigate("/login"), 1200);
     } catch (err) {

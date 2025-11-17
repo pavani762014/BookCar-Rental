@@ -25,7 +25,7 @@ const Dashboard = () => {
           return;
         }
 
-        const res = await axios.get(`http://localhost:5005/api/bookings/user/${userId}`, {
+        const res = await axios.get(`https://book-car-rental-backend.onrender.com/api/auth/user/${userId}`, {
           headers: { Authorization: token }
         });
 
